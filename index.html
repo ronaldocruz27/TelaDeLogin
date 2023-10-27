@@ -13,25 +13,38 @@
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="mail" required>
+                        <input type="mail" required id="login">
                         <label for="">Usuario</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" required id ="senha">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
                         <label for=""><input type="checkbox">Lembrar <a href="#">Esqueci minha senha</a></label>
 
                     </div>
-                    <button>Login</button>
+                    <button onclick="logar(); return false">Login</button>
                     <div class="register">
                         <p>Eu não tenho uma conta <a href="#"></a></p>
                     </div>
                 </form>
             </div>
         </div>
-    </section>    
+    </section>
+    <script>
+
+        function logar(){
+
+            var Login = document.getElementById('login').value;
+            var Senha = document.getElementById('senha').value;
+
+            if(Login == "teste" && Senha == "teste"){
+                alert('Bem-vindo');
+                location.href = 'tela_menu.html';
+            }
+        }
+    </script>    
 </body>
 </html>
